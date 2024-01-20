@@ -62,3 +62,11 @@ void Communication::sendMessage(const char * message) {
     // Serial.println();
     // Serial.println(F("done"));
 } 
+
+void Communication::sendData(const uint8_t * dataType, int8_t data)
+{
+    //uint8_t* Order = (uint8_t*) &myOrder;
+    _serial.write(dataType, sizeof(uint8_t));
+    // _serial.write(data);
+    // _serial.write(_marqueurDeFin);
+}
